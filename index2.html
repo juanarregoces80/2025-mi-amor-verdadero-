@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>💕 Nuestro Rincón Privado 💕</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #fff0f5, #ffe6f0);
+      color: #660033;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #b30059;
+      margin-bottom: 20px;
+    }
+
+    input[type="password"] {
+      padding: 12px;
+      width: 250px;
+      border: 1px solid #ffb3c6;
+      border-radius: 10px;
+      background-color: #fff;
+      font-size: 16px;
+      color: #660033;
+      box-shadow: 0 0 5px #ffcce0;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #ff80aa;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    button:hover {
+      background-color: #e65c9c;
+    }
+
+    .error {
+      color: #cc0033;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    #videos {
+      display: none;
+      margin-top: 40px;
+      background-color: #fff0f5;
+      border: 2px dashed #ff99bb;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 10px #ffcce0;
+    }
+
+    video {
+      display: block;
+      margin: 20px auto;
+      max-width: 90%;
+      border: 4px solid #ffb6c1;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #ffcce0;
+    }
+
+    h3 {
+      color: #b30059;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+    .contenedor-foto {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contenedor-foto img {
+  width: 80%;
+  max-width: 500px;
+  border: 5px solid #ffb6c1;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ffcce0;
+  transition: transform 0.3s ease;
+}
+
+.contenedor-foto img:hover {
+  transform: scale(1.02);
+}
+  </style>
+</head>
+<body>
+
+  <h2>💗 Ingresa la contraseña para ver nuestros recuerdos 💗</h2>
+
+  <input type="password" id="clave" placeholder="Escribe la contraseña...">
+  <button onclick="verificar()">Entrar</button>
+  <div class="error" id="mensaje"></div>
+
+  <div id="videos">
+    <h3>🎥 Nuestros momentos especiales 🎥</h3>
+
+    <video controls>
+      <source src="video1.mp4" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+
+    <video controls>
+      <source src="video2.mp4" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+
+    <video controls>
+      <source src="video3.mp4" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+
+    
+        <img src="foto.jpg" alt="Nuestra foto especial">
+      <
+      
+
+  </div>
+
+  <script>
+    function verificar() {
+      const clave = document.getElementById("clave").value;
+      const videos = document.getElementById("videos");
+      const mensaje = document.getElementById("mensaje");
+
+      if (clave === "240625") { // 💖 Cambia la contraseña aquí
+        videos.style.display = "block";
+        mensaje.innerText = "";
+        document.getElementById("clave").style.display = "none";
+        event.target.style.display = "none"; // oculta el botón
+      } else {
+        mensaje.innerText = "Contraseña incorrecta. Intenta con amor 💕";
+        videos.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
